@@ -1,5 +1,6 @@
 source "https://rubygems.org"
 
+#ruby "2.6.10"
 ruby "3.1.0"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
@@ -44,14 +45,15 @@ gem "bootsnap", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
-# better errors
-gem 'better_errors', '~> 2.4'
+
 
 # styling
 gem 'bulma-rails', '~> 0.6.1'
 
 # forms
 gem 'simple_form', '~> 5.3'
+
+gem "sassc-rails"
 
 
 group :development, :test do
@@ -71,7 +73,10 @@ group :development do
 
   gem "error_highlight", ">= 0.4.0", platforms: [:ruby]
   gem 'guard', '~> 2.18', '>= 2.18.1'
-  gem 'guard-livereload', '~> 2.5', '>= 2.5.2'
+  gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false 
+
+  # better errors
+  gem 'better_errors', '~> 2.4'
 end
 
 group :test do
